@@ -13,17 +13,17 @@ namespace myshop.core.Models
         public string Id { get; set; }
         [StringLength(20)]
         [DisplayName("Product Name")]
-        public string name { get; set; }
-        public string description { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         [Range(0,1000)]
-        public string price { get; set; }
-        public string category { get; set; }
-        public string image { get; set; }
+        public string Price { get; set; }
+        public string Category { get; set; }
+        public string Image { get; set; }
 
         //constructor below
         public Product()
         {
-            this.id = Guid.NewGuid().ToString();
+            this.Id = Guid.NewGuid().ToString();
         }
     }
 }

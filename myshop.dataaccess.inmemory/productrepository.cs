@@ -8,12 +8,12 @@ using myshop.core.Models;
 
 namespace myshop.dataaccess.inmemory
 {
-    public class productrepository
+    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products;
 
-        public productrepository()
+        public ProductRepository()
         {
             products = cache["products"] as List<Product>;
             if(products == null)
@@ -44,7 +44,7 @@ namespace myshop.dataaccess.inmemory
                 throw new Exception("Product not found");
             }
         }
-        public Product Find(string ID)
+        public Product Find(string Id)
         {
             Product product= products.Find(p => p.Id == Id);
 
